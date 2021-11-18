@@ -26,34 +26,11 @@ namespace _3._1_task
 
             int X4, Y4;
 
-            if (X1 == X2)
-            {
-                X4 = X3;
-            }
-            else if (X1==X3)
-            {
-                X4 = X2;
-            }
-            else
-            {
-                X4 = X1;
-            }
-
-            if (Y1 == Y2)
-            {
-                Y4 = Y3;
-            }
-            else if (Y1 == Y3)
-            {
-                Y4 = Y2;
-            }
-            else
-            {
-                Y4 = Y1;
-            }
+            X4 = (X1 == X2) ? X4 = X3 : X4 = (X1 == X3) ? X4 = X2 : X4 = X1;
+            Y4 = (Y1 == Y2) ? Y4 = Y3 : Y4 = (Y1 == Y3) ? Y4 = Y2 : Y4 = Y1;
 
 
-            if ((X1-X2 ==0|| X1-X3==0 || X2 - X3==0) && (Y1-Y2==0 || Y1 - Y3==0 || Y2 - Y3==0))
+            if ((X1 - X2 == 0 || X1 - X3 == 0 || X2 - X3 == 0) && (Y1 - Y2 == 0 || Y1 - Y3 == 0 || Y2 - Y3 == 0))
             {
                 Console.WriteLine("X4 = {0}, Y4 = {1}", X4, Y4);
                 Console.ReadLine();
@@ -65,7 +42,7 @@ namespace _3._1_task
             }
 
 
-            
+
         }
     }
 }
